@@ -1,0 +1,178 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>家庭作業05（期中考）</title>
+    <style>
+        h4{
+            color: red;
+        }
+        div{
+            color: blue;
+            margin: 5px;
+        }
+                 table{
+              border:1px solid black
+                   
+         }
+         td{
+            border:1px solid black                    
+
+        }
+    </style>
+    </head>
+    <body>
+        <form id="form01">
+            姓名:<input type="text" name="name01" value="李垲家"><br>
+            收件住址:<input type="text" name="address01" value="台北市德惠街3巷3号"><br>
+            電話:<input type="tel" name="tel01" value="0903052915"><br>
+            電子郵件:<input type="email" name="email01" value="1067317082@qq.com"><br>
+            指定送貨日期:<input type="date" name="date01"><br>
+            电子器械種類:<br><input type="radio" name="fruit" id="fruit01" value="键盘(1个)">键盘(1个)699元<br>
+            <input type="radio" name="fruit" id="fruit01" value="鼠标(1只)">鼠标(1只)499元<br>
+            <input type="radio" name="fruit" id="fruit01" value="显示器(1台)">显示器(1台)1300元<br>
+            <input type="radio" name="fruit" id="fruit01" value="显卡(1块)">显卡(1块)6000元<br>
+            <input type="radio" name="fruit" id="fruit01" value="散热板(1片">散热板(1片)300元<br>
+        </form>
+        <button onclick="shoppingInfo()"><h4>結帳</h4></button>
+        <div id="demo"></div>
+        <script>
+            function shoppingInfo(){
+                var x = document.getElementById("form01");
+                var item = "";
+                var price = 0;
+                var text ="<h4>您的購物清單如下:</h4>";
+                var i;
+                text += "<table border='1' width='20%' cellspacing='0' cellpadding='0'>";
+                for (i = 0; i < 5; i++){
+    switch(i){
+        case 0:
+            item = "姓名:";
+            break;
+        case 1:
+            item = "收件住址:";
+            break;
+            case 2:
+            item = "電話:";
+            break;
+            case 3:
+            item = "電子郵件:";
+            break;
+            case 4:
+            item = "指定送貨日期:";
+            break;
+        }
+           text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
+            text += "</tr>";
+                }
+            for (i=5; i<=9;i++){
+                if(x.elements[i].checked == true){
+                    switch(i){
+                            case 5: price=699;break;
+                            case 6: price=499;break;
+                            case 7: price=1300;break;
+                            case 8: price=6000;break;
+                            case 9: price=300;break;
+                    }
+                    text +="<tr><td>电子器械種類:</td>"+"<td>"+ x.elements[i].value +"</td></tr>";
+                    text +="<tr><td>價格合計:</td>"+"<td>"+ price +"</td></tr>"
+                }
+                 text += "</tr>";
+            }
+                 text += "</table>";
+                document.getElementById("demo").innerHTML = text;
+            }
+            
+                
+=======
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>家庭作業05（期中考）</title>
+    <style>
+        h4{
+            color: red;
+        }
+        div{
+            color: blue;
+            margin: 5px;
+        }
+                 table{
+              border:1px solid black
+                   
+         }
+         td{
+            border:1px solid black                    
+
+        }
+    </style>
+    </head>
+    <body>
+        <form id="form01">
+            姓名:<input type="text" name="name01" value="李垲家"><br>
+            收件住址:<input type="text" name="address01" value="台北市德惠街3巷3号"><br>
+            電話:<input type="tel" name="tel01" value="0903052915"><br>
+            電子郵件:<input type="email" name="email01" value="1067317082@qq.com"><br>
+            指定送貨日期:<input type="date" name="date01"><br>
+            电子器械種類:<br><input type="radio" name="fruit" id="fruit01" value="键盘(1个)">键盘(1个)699元<br>
+            <input type="radio" name="fruit" id="fruit01" value="鼠标(1只)">鼠标(1只)499元<br>
+            <input type="radio" name="fruit" id="fruit01" value="显示器(1台)">显示器(1台)1300元<br>
+            <input type="radio" name="fruit" id="fruit01" value="显卡(1块)">显卡(1块)6000元<br>
+            <input type="radio" name="fruit" id="fruit01" value="散热板(1片">散热板(1片)300元<br>
+        </form>
+        <button onclick="shoppingInfo()"><h4>結帳</h4></button>
+        <div id="demo"></div>
+        <script>
+            function shoppingInfo(){
+                var x = document.getElementById("form01");
+                var item = "";
+                var price = 0;
+                var text ="<h4>您的購物清單如下:</h4>";
+                var i;
+                text += "<table border='1' width='20%' cellspacing='0' cellpadding='0'>";
+                for (i = 0; i < 5; i++){
+    switch(i){
+        case 0:
+            item = "姓名:";
+            break;
+        case 1:
+            item = "收件住址:";
+            break;
+            case 2:
+            item = "電話:";
+            break;
+            case 3:
+            item = "電子郵件:";
+            break;
+            case 4:
+            item = "指定送貨日期:";
+            break;
+        }
+           text += "<td>" + item + "</td>" + "<td>" + x.elements[i].value +"</td>";
+            text += "</tr>";
+                }
+            for (i=5; i<=9;i++){
+                if(x.elements[i].checked == true){
+                    switch(i){
+                            case 5: price=699;break;
+                            case 6: price=499;break;
+                            case 7: price=1300;break;
+                            case 8: price=6000;break;
+                            case 9: price=300;break;
+                    }
+                    text +="<tr><td>电子器械種類:</td>"+"<td>"+ x.elements[i].value +"</td></tr>";
+                    text +="<tr><td>價格合計:</td>"+"<td>"+ price +"</td></tr>"
+                }
+                 text += "</tr>";
+            }
+                 text += "</table>";
+                document.getElementById("demo").innerHTML = text;
+            }
+            
+                
+>>>>>>> ff39dd986df567e8c868bf9209f4662ae5110f14
+        </script>
